@@ -41,7 +41,7 @@ async function proxy(request, env) {
     // proxy the request
     const url = new URL(request.url);
     // 1. replace with the official host
-    url.host = 'api.openai.com';
+    url.host = 'api.anthropic.com';
     // 2. replace with the real API key
     headers.set(authKey, `Bearer ${env.OPENAPI_API_KEY}`);
     // 3. issue the underlying request
